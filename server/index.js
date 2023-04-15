@@ -1,5 +1,7 @@
 const { Server } = require("socket.io");
-
+const cors = require('cors')
+const app = require('express')()
+app.use(cors())
 const io = new Server(8000, {
   cors: true,
 });
